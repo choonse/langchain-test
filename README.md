@@ -1,6 +1,6 @@
 # Langchain-test
 
-Langchain test samples with Python.
+Langchain test samples using Python.
 
 ## Clone
 git clone https://github.com/choonse/langchain-test.git
