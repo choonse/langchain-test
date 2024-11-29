@@ -1,7 +1,7 @@
 import os
 import json
 
-with open("key.json", "r", encoding="utf-8") as file:
+with open("../key.json", "r", encoding="utf-8") as file:
     key_data = json.load(file)
 os.environ["OPENAI_API_KEY"] = key_data["openai_key"]
 

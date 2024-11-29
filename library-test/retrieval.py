@@ -1,7 +1,7 @@
 import os
 import json
 
-with open("key.json", "r", encoding="utf-8") as file:
+with open("../key.json", "r", encoding="utf-8") as file:
     key_data = json.load(file)
 
 os.environ["OPENAI_API_KEY"] = key_data["openai_key"]
@@ -13,7 +13,7 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
 
 embeddings = OpenAIEmbeddings()
-loader = PyPDFLoader("/Users/choonse/Downloads/The_Adventures_of_Tom_Sawyer.pdf")
+loader = PyPDFLoader("../sample/The_Adventures_of_Tom_Sawyer.pdf")
 document = loader.load()
 
 db = FAISS.from_documents(document, embeddings)
